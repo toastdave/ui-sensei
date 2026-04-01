@@ -4,8 +4,8 @@ Goal:
 Collect a reliable capture package for each site in the requested batch so research agents can analyze the site without reopening it.
 
 Workflow:
-1. Run `python scripts/check_capture_env.py`.
-2. If preflight passes, run `python scripts/run_capture_batch.py --config config/batches/<batch>.json`.
+1. Run `bun run capture:check`.
+2. If preflight passes, run `bun run capture:batch` or `bun run scripts/run-capture-batch.ts --config config/batches/<batch>.json`.
 3. If any site capture fails, report the failing site and preserve partial artifacts.
 4. If capture succeeds, verify each site folder contains screenshots, notes, and `manifest.json`.
 

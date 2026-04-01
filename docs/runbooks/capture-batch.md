@@ -11,8 +11,8 @@ Use a browser automation agent or browser tool in a semi-structured way.
 The repo now includes an executable baseline workflow:
 
 ```bash
-python scripts/check_capture_env.py
-python scripts/run_capture_batch.py --config config/batches/batch-01.json
+bun run capture:check
+bun run capture:batch
 ```
 
 That flow runs a preflight check and then captures each configured site into `data/captures/<batch>/<site>/`.
@@ -215,14 +215,14 @@ Once a site's capture folder is complete:
 
 ## Practical V1 Recommendation
 
-Until we add automation scripts, the simplest process is:
+The fastest working approach is:
 
-1. Use a browser-capable agent to inspect one site at a time.
-2. Save the artifacts manually into the batch folder.
-3. Validate the manifest shape against `schemas/capture.schema.json`.
+1. Run the Bun baseline capture scripts first.
+2. Save the generated artifacts into the batch folder.
+3. Let a browser-capable agent augment `interaction-notes.md` only when a site is clearly motion- or interaction-heavy.
 4. Hand the capture package to the research skill.
 
-That is enough to get batch one moving without over-engineering capture first.
+That gives you repeatable evidence collection without blocking on a perfect fully autonomous capture system.
 
 ## Automated Baseline Workflow
 
@@ -231,7 +231,7 @@ That is enough to get batch one moving without over-engineering capture first.
 Run:
 
 ```bash
-python scripts/check_capture_env.py
+bun run capture:check
 ```
 
 This checks that `agent-browser` is available and that it can launch a browser successfully.
@@ -241,7 +241,7 @@ This checks that `agent-browser` is available and that it can launch a browser s
 Run:
 
 ```bash
-python scripts/run_capture_batch.py --config config/batches/batch-01.json
+bun run capture:batch
 ```
 
 ### Run a single site
@@ -249,7 +249,7 @@ python scripts/run_capture_batch.py --config config/batches/batch-01.json
 Run:
 
 ```bash
-python scripts/capture_site.py --batch batch-01 --slug railway --url https://railway.com
+bun run capture:site --batch batch-01 --slug railway --url https://railway.com
 ```
 
 ### What the automated workflow does

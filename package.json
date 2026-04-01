@@ -1,0 +1,10 @@
+{
+  "name": "ui-sensei",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "capture:check": "bun run scripts/check-capture-env.ts",
+    "capture:site": "bun run scripts/capture-site.ts",
+    "capture:batch": "bun run scripts/run-capture-batch.ts --config config/batches/batch-01.json"
+  }
+}

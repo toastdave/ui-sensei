@@ -47,8 +47,8 @@ Then produce:
 ## Start here
 
 - Read `docs/plan.md`
-- Run `python scripts/check_capture_env.py`
-- Run `python scripts/run_capture_batch.py --config config/batches/batch-01.json`
+- Run `bun run capture:check`
+- Run `bun run capture:batch`
 - Use `skills/frontend-design-researcher.md` with `prompts/master-research-prompt.md`
 - Save outputs into `data/`
 - Use the PRDs in `docs/prds/` to continue the roadmap
