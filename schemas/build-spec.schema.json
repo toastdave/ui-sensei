@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ui-sensei.local/schemas/build-spec.schema.json",
+  "title": "Build Spec",
+  "type": "object",
+  "required": [
+    "project",
+    "archetype",
+    "product_context",
+    "design_goals",
+    "constraints",
+    "layout_rules",
+    "typography_rules",
+    "component_rules",
+    "motion_rules",
+    "accessibility_rules",
+    "performance_rules",
+    "approved_patterns",
+    "anti_patterns"
+  ],
+  "properties": {
+    "project": {
+      "type": "string"
+    },
+    "archetype": {
+      "type": "string"
+    },
+    "product_context": {
+      "type": "string"
+    },
+    "design_goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "layout_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "typography_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "component_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "motion_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "copy_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "accessibility_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "performance_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "approved_patterns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "anti_patterns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

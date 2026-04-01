@@ -1,0 +1,315 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ui-sensei.local/schemas/site-report.schema.json",
+  "title": "Site Report Summary",
+  "type": "object",
+  "required": [
+    "site",
+    "url",
+    "archetypes",
+    "summary",
+    "observed",
+    "inferred",
+    "uncertain",
+    "reusable_rules",
+    "implementation_notes",
+    "caveats",
+    "scores"
+  ],
+  "properties": {
+    "site": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "archetypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "string"
+    },
+    "layout": {
+      "type": "object",
+      "properties": {
+        "container_strategy": {
+          "type": "string"
+        },
+        "grid_style": {
+          "type": "string"
+        },
+        "section_spacing": {
+          "type": "string"
+        },
+        "density": {
+          "type": "string"
+        },
+        "alignment": {
+          "type": "string"
+        },
+        "responsive_notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "typography": {
+      "type": "object",
+      "properties": {
+        "style": {
+          "type": "string"
+        },
+        "hero_scale": {
+          "type": "string"
+        },
+        "body_scale": {
+          "type": "string"
+        },
+        "line_length": {
+          "type": "string"
+        },
+        "hierarchy_strategy": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "color_surface": {
+      "type": "object",
+      "properties": {
+        "palette": {
+          "type": "string"
+        },
+        "background_strategy": {
+          "type": "string"
+        },
+        "surface_strategy": {
+          "type": "string"
+        },
+        "contrast_style": {
+          "type": "string"
+        },
+        "special_effects": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "components": {
+      "type": "object",
+      "properties": {
+        "nav": {
+          "type": "string"
+        },
+        "buttons": {
+          "type": "string"
+        },
+        "cards": {
+          "type": "string"
+        },
+        "feature_sections": {
+          "type": "string"
+        },
+        "forms": {
+          "type": "string"
+        },
+        "footer": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "copy": {
+      "type": "object",
+      "properties": {
+        "tone": {
+          "type": "string"
+        },
+        "headline_style": {
+          "type": "string"
+        },
+        "cta_style": {
+          "type": "string"
+        },
+        "proof_style": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "motion": {
+      "type": "object",
+      "properties": {
+        "overall_style": {
+          "type": "string"
+        },
+        "hover_style": {
+          "type": "string"
+        },
+        "scroll_style": {
+          "type": "string"
+        },
+        "transition_intensity": {
+          "type": "string"
+        },
+        "timing_guess": {
+          "type": "string"
+        },
+        "notable_patterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "technical_signals": {
+      "type": "object",
+      "properties": {
+        "webgl_or_3d": {
+          "type": "string"
+        },
+        "animation_stack_guess": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rendering_notes": {
+          "type": "string"
+        },
+        "performance_notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "observed": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "inferred": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "uncertain": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "reusable_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "implementation_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "caveats": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "required": [
+        "visual_polish",
+        "clarity",
+        "hierarchy",
+        "copy_quality",
+        "motion_quality",
+        "component_quality",
+        "technical_ambition",
+        "pattern_reusability"
+      ],
+      "properties": {
+        "visual_polish": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "clarity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "hierarchy": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "copy_quality": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "motion_quality": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "component_quality": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "technical_ambition": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "pattern_reusability": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "finding": {
+      "type": "object",
+      "required": [
+        "category",
+        "statement",
+        "confidence"
+      ],
+      "properties": {
+        "category": {
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
