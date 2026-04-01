@@ -1,0 +1,25 @@
+{
+  "batch": "batch-01",
+  "sites": [
+    {
+      "slug": "railway",
+      "url": "https://railway.com"
+    },
+    {
+      "slug": "notion-product",
+      "url": "https://www.notion.com/product"
+    },
+    {
+      "slug": "posthog",
+      "url": "https://posthog.com"
+    },
+    {
+      "slug": "voidzero",
+      "url": "https://voidzero.dev"
+    },
+    {
+      "slug": "airbnb",
+      "url": "https://www.airbnb.com"
+    }
+  ]
+}

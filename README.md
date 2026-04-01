@@ -8,6 +8,7 @@ The goal is not to clone sites. The goal is to capture what makes strong sites f
 
 - `docs/plan.md` - master setup and milestone plan
 - `docs/architecture.md` - agent roles and data flow
+- `docs/runbooks/capture-batch.md` - step-by-step guide for running a capture batch
 - `skills/frontend-design-researcher.md` - research skill spec for local models
 - `prompts/` - reusable prompts for research, build, and critique agents
 - `schemas/` - machine-readable contracts for captures, reports, patterns, archetypes, and build specs
@@ -46,6 +47,8 @@ Then produce:
 ## Start here
 
 - Read `docs/plan.md`
+- Run `python scripts/check_capture_env.py`
+- Run `python scripts/run_capture_batch.py --config config/batches/batch-01.json`
 - Use `skills/frontend-design-researcher.md` with `prompts/master-research-prompt.md`
 - Save outputs into `data/`
 - Use the PRDs in `docs/prds/` to continue the roadmap
