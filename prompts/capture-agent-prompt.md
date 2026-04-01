@@ -5,9 +5,10 @@ Collect a reliable capture package for each site in the requested batch so resea
 
 Workflow:
 1. Run `bun run capture:check`.
-2. If preflight passes, run `bun run capture:batch` or `bun run scripts/run-capture-batch.ts --config config/batches/<batch>.json`.
-3. If any site capture fails, report the failing site and preserve partial artifacts.
-4. If capture succeeds, verify each site folder contains screenshots, notes, and `manifest.json`.
+2. If preflight fails because Chrome is missing local shared libraries on this Arch-based setup, run `bun run capture:bootstrap-libs` and then retry preflight.
+3. If preflight passes, run `bun run capture:batch` or `bun run scripts/run-capture-batch.ts --config config/batches/<batch>.json`.
+4. If any site capture fails, report the failing site and preserve partial artifacts.
+5. If capture succeeds, verify each site folder contains screenshots, notes, and `manifest.json`.
 
 Capture standard:
 - desktop hero screenshot

@@ -6,6 +6,7 @@ import { existsSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 
 const ROOT = resolve(import.meta.dir, "..");
+const LOCAL_CHROME_WRAPPER = resolve(ROOT, "scripts", "chrome-with-libs.sh");
 const ANSI_RE = /\x1b\[[0-?]*[ -/]*[@-~]/g;
 const KNOWN_TECH: Record<string, string> = {
   three: "Possible Three.js or WebGL-related script reference detected.",
@@ -51,6 +52,14 @@ function run(cmd: string[], input?: string): string {
   return result.stdout || "";
 }
 
+function agentBrowserCommand(args: string[]): string[] {
+  if (existsSync(LOCAL_CHROME_WRAPPER)) {
+    return ["agent-browser", "--executable-path", LOCAL_CHROME_WRAPPER, ...args];
+  }
+
+  return ["agent-browser", ...args];
+}
+
 function ensureParent(path: string): void {
   mkdirSync(dirname(path), { recursive: true });
 }
@@ -87,8 +96,9 @@ function parseArgs(argv: string[]): Record<string, string> {
 }
 
 function captureEval(session: string, script: string): DomData {
-  const raw = clean(run(["agent-browser", "--session", session, "eval", "--stdin"], script));
-  return JSON.parse(raw) as DomData;
+  const raw = clean(run(agentBrowserCommand(["--session", session, "eval", "--stdin"]), script));
+  const parsed = JSON.parse(raw) as DomData | string;
+  return typeof parsed === "string" ? (JSON.parse(parsed) as DomData) : parsed;
 }
 
 function deriveTechHints(domData: DomData): string[] {
@@ -256,18 +266,18 @@ const manifest = join(outputDir, "manifest.json");
 let domData: DomData = {};
 
 try {
-  run(["agent-browser", "--session", session, "open", "about:blank"]);
-  run(["agent-browser", "--session", session, "set", "viewport", `${desktopWidth}`, `${desktopHeight}`, "1"]);
-  run(["agent-browser", "--session", session, "open", url]);
-  run(["agent-browser", "--session", session, "wait", "--load", "networkidle"]);
-  run(["agent-browser", "--session", session, "wait", "1500"]);
-  run(["agent-browser", "--session", session, "screenshot", desktopHero]);
-  run(["agent-browser", "--session", session, "screenshot", desktopFull, "--full"]);
+  run(agentBrowserCommand(["--session", session, "open", "about:blank"]));
+  run(agentBrowserCommand(["--session", session, "set", "viewport", `${desktopWidth}`, `${desktopHeight}`, "1"]));
+  run(agentBrowserCommand(["--session", session, "open", url]));
+  run(agentBrowserCommand(["--session", session, "wait", "--load", "networkidle"]));
+  run(agentBrowserCommand(["--session", session, "wait", "1500"]));
+  run(agentBrowserCommand(["--session", session, "screenshot", desktopHero]));
+  run(agentBrowserCommand(["--session", session, "screenshot", desktopFull, "--full"]));
 
-  const desktopSnapshotText = clean(run(["agent-browser", "--session", session, "snapshot", "-i"]));
+  const desktopSnapshotText = clean(run(agentBrowserCommand(["--session", session, "snapshot", "-i"])));
   writeText(snapshotDesktop, desktopSnapshotText);
 
-  const textBody = clean(run(["agent-browser", "--session", session, "get", "text", "body"]));
+  const textBody = clean(run(agentBrowserCommand(["--session", session, "get", "text", "body"])));
   writeText(visibleText, textBody);
 
   domData = captureEval(session, domEvalScript);
@@ -275,18 +285,19 @@ try {
   writeText(interactionNotes, buildInteractionNotes(desktopSnapshotText));
   writeText(techHints, `# Tech Hints\n\n${deriveTechHints(domData).map((item) => `- ${item}`).join("\n")}`);
 
-  run(["agent-browser", "--session", session, "set", "device", mobileDevice]);
-  run(["agent-browser", "--session", session, "open", url]);
-  run(["agent-browser", "--session", session, "wait", "--load", "networkidle"]);
-  run(["agent-browser", "--session", session, "wait", "1500"]);
-  run(["agent-browser", "--session", session, "screenshot", mobileFull, "--full"]);
-  const mobileSnapshotText = clean(run(["agent-browser", "--session", session, "snapshot", "-i"]));
+  run(agentBrowserCommand(["--session", session, "set", "device", mobileDevice]));
+  run(agentBrowserCommand(["--session", session, "open", url]));
+  run(agentBrowserCommand(["--session", session, "wait", "--load", "networkidle"]));
+  run(agentBrowserCommand(["--session", session, "wait", "1500"]));
+  run(agentBrowserCommand(["--session", session, "screenshot", mobileFull, "--full"]));
+  const mobileSnapshotText = clean(run(agentBrowserCommand(["--session", session, "snapshot", "-i"])));
   writeText(snapshotMobile, mobileSnapshotText);
 } catch (error) {
   console.error(error instanceof Error ? error.message : String(error));
   process.exitCode = 1;
 } finally {
-  spawnSync("agent-browser", ["--session", session, "close"], {
+  const [command, ...args] = agentBrowserCommand(["--session", session, "close"]);
+  spawnSync(command, args, {
     cwd: ROOT,
     encoding: "utf8"
   });

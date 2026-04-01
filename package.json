@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "capture:bootstrap-libs": "bun run scripts/bootstrap-browser-libs.ts",
     "capture:check": "bun run scripts/check-capture-env.ts",
     "capture:site": "bun run scripts/capture-site.ts",
     "capture:batch": "bun run scripts/run-capture-batch.ts --config config/batches/batch-01.json"

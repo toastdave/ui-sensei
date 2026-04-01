@@ -1,0 +1,3 @@
+- generic "Now you’ll see one price for your trip, all fees included.Now you’ll see one price for your trip, al" [ref=e1] clickable [onclick]
+  - button "Close" [ref=e2]
+  - button "Got it" [ref=e3]

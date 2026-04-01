@@ -47,6 +47,7 @@ Then produce:
 ## Start here
 
 - Read `docs/plan.md`
+- If preflight fails on this Arch-based setup, run `bun run capture:bootstrap-libs`
 - Run `bun run capture:check`
 - Run `bun run capture:batch`
 - Use `skills/frontend-design-researcher.md` with `prompts/master-research-prompt.md`

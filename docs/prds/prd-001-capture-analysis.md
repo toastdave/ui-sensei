@@ -53,6 +53,12 @@ Create the first operational pipeline for:
 - five markdown site reports
 - five JSON summaries
 
+## Execution Notes
+
+- The baseline capture workflow now runs through Bun scripts rather than Python.
+- In this environment, `agent-browser` may require locally extracted Chrome runtime libraries before preflight passes.
+- The repo includes `bun run capture:bootstrap-libs` plus `scripts/chrome-with-libs.sh` as a non-root fallback for Arch-based setups.
+
 ## Success Metrics
 
 - Each site can be understood by a new agent from stored materials alone.

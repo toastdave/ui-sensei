@@ -11,6 +11,7 @@ Use a browser automation agent or browser tool in a semi-structured way.
 The repo now includes an executable baseline workflow:
 
 ```bash
+bun run capture:bootstrap-libs
 bun run capture:check
 bun run capture:batch
 ```
@@ -235,6 +236,14 @@ bun run capture:check
 ```
 
 This checks that `agent-browser` is available and that it can launch a browser successfully.
+
+If the preflight fails because Chrome is missing shared libraries in this Arch-based environment, run:
+
+```bash
+bun run capture:bootstrap-libs
+```
+
+That extracts the required runtime libraries from the local pacman package cache into `.local/browser-libs/`, and the capture scripts automatically use the bundled wrapper in `scripts/chrome-with-libs.sh`.
 
 ### Run a full batch
 
