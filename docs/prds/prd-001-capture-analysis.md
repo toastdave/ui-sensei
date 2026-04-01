@@ -2,7 +2,7 @@
 
 ## Status
 
-In Progress
+In Progress - batch-01 analysis outputs complete, pipeline still open for future batches
 
 ## Problem
 
@@ -53,6 +53,8 @@ Create the first operational pipeline for:
 - analysis packet generator for captured sites
 - five markdown site reports
 - five JSON summaries
+- one batch synthesis
+- first frontend design rules document
 
 ## Execution Notes
 
@@ -62,6 +64,8 @@ Create the first operational pipeline for:
 - Batch `batch-01` capture artifacts now exist for Railway, Notion Product, PostHog, VoidZero, and Airbnb.
 - The repo now includes `bun run analysis:prepare` to generate one analysis packet per captured site in `data/prompts/<batch>/`.
 - The repo now includes `bun run analysis:validate --file <path>` for lightweight JSON summary validation.
+- Batch `batch-01` now has completed per-site reports in `data/reports/batch-01/` and validated JSON summaries in `data/json/batch-01/`.
+- Batch `batch-01` now has a completed synthesis in `data/syntheses/batch-01.md` plus `frontend_design_rules_v1.md`.
 
 ## Success Metrics
 
@@ -78,7 +82,6 @@ Create the first operational pipeline for:
 
 ## Next Tasks
 
-1. Generate the five site reports from the prepared analysis packets.
-2. Validate the five JSON summaries.
-3. Write `data/syntheses/batch-01.md`.
-4. Feed the completed reports into PRD-002 pattern extraction.
+1. Feed the completed batch-01 reports and synthesis into PRD-002 pattern extraction.
+2. Create the first atomic pattern records and archetype files.
+3. Reuse the same validated analysis workflow for batch-02 and later batches.

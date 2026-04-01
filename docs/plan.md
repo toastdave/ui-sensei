@@ -146,6 +146,10 @@ Deliver:
 - one report per site
 - one JSON summary per site
 
+Status:
+
+- Complete for `batch-01`
+
 ### Milestone 3 - Synthesis and rule extraction
 
 Deliver:
@@ -155,6 +159,11 @@ Deliver:
 - initial pattern library
 - anti-pattern library
 - initial archetype files
+
+Status:
+
+- In progress: `data/syntheses/batch-01.md` and `frontend_design_rules_v1.md` are complete
+- Remaining: initial pattern library, anti-pattern library, and first archetype files
 
 ### Milestone 4 - Builder integration
 
@@ -238,8 +247,7 @@ The minimum downstream input should include:
 
 ## Recommended Next Agent Tasks
 
-1. Implement the capture workflow from `docs/prds/prd-001-capture-analysis.md`.
-2. Run the first five-site batch and populate `data/captures/`.
-3. Use the research skill to generate reports and JSON summaries.
-4. Extract the first 20 to 40 atomic patterns.
-5. Create `frontend_design_rules_v1.md` from the first synthesis.
+1. Extract the first 20 to 40 atomic patterns from completed batch-01 outputs.
+2. Create `data/archetypes/developer-tool-modern.json` and `data/archetypes/product-ui-system.json`.
+3. Build the first downstream build spec from one of those archetypes.
+4. Generate and review one original homepage using the new build spec.

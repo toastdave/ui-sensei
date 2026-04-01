@@ -52,10 +52,12 @@ Create the loop that lets builder agents consume archetype guidance and lets cri
 - archetype files
 - pattern library
 - review rubric
+- `frontend_design_rules_v1.md`
+- completed batch syntheses
 
 ## Next Tasks
 
-1. Create the first build spec from `saas-clarity`.
-2. Use it to generate one homepage.
-3. Review the output using `docs/rubrics/build-review-rubric.md`.
-4. Update the archetype and rules based on the review.
+1. Wait for the first archetype files and extracted pattern library from batch-01.
+2. Create the first build spec from `developer-tool-modern` or `product-ui-system`.
+3. Use it to generate one homepage.
+4. Review the output using `docs/rubrics/build-review-rubric.md` and feed misses back into the rules.

@@ -1,0 +1,157 @@
+{
+  "site": "voidzero",
+  "url": "https://voidzero.dev",
+  "archetypes": [
+    "developer-tool-modern",
+    "minimal-saas-clarity"
+  ],
+  "summary": "VoidZero uses sparse hero pacing, crisp border systems, dark product sections, and restrained technical spectacle to present a modern JavaScript tooling brand with unusual precision.",
+  "layout": {
+    "container_strategy": "Centered sparse hero followed by alternating light and dark full-width bands.",
+    "grid_style": "Structured CSS-grid-like product layouts with heavy border use and modular detail panes.",
+    "section_spacing": "Large open spacing in light sections and denser measured spacing in dark product bands.",
+    "density": "Low in the hero, moderate in product and resource sections.",
+    "alignment": "Centered top-of-page story, then mostly left-aligned content inside grids.",
+    "responsive_notes": "Mobile preserves the same light/dark sequence and still exposes selectors, metrics, gallery, and newsletter areas."
+  },
+  "typography": {
+    "style": "Clean modern sans-serif with selective accent-color emphasis.",
+    "hero_scale": "Large centered headline with highlighted words in purple.",
+    "body_scale": "Compact and concise throughout.",
+    "line_length": "Short to medium, usually tightly controlled.",
+    "hierarchy_strategy": "Quiet hero, compact product descriptions, and large metric numerals for proof."
+  },
+  "color_surface": {
+    "palette": "Black, white, soft gray, and vivid purple-blue accents.",
+    "background_strategy": "Bright sparse intro, dark product system core, then alternating resets.",
+    "surface_strategy": "Line-based panels, dark textured sections, and restrained image inserts.",
+    "contrast_style": "High contrast overall with accent color used sparingly for emphasis.",
+    "special_effects": [
+      "textured announcement bar",
+      "line-drawn cube visual",
+      "grid-driven dark sections"
+    ]
+  },
+  "components": {
+    "nav": "Minimal top nav with social links and a slim announcement banner above it.",
+    "buttons": "Understated text-forward CTAs and simple selector buttons.",
+    "cards": "Resource gallery cards and bordered product detail panes.",
+    "feature_sections": "Portfolio selector, metrics selector, resource gallery, and newsletter signup.",
+    "forms": "Single-field newsletter form near the footer.",
+    "footer": "Compact multi-column footer with product, company, and social links."
+  },
+  "copy": {
+    "tone": "Calm, technical, and credibility-led.",
+    "headline_style": "Short mission statements and concise product descriptors.",
+    "cta_style": "Understated explore, learn-more, and subscribe actions.",
+    "proof_style": "OSS portfolio, download metrics, contributor counts, investor backing, and update cadence."
+  },
+  "motion": {
+    "overall_style": "Restrained and likely tied to selectors, galleries, and possibly a lightweight hero visual.",
+    "hover_style": "Not confirmed from the available evidence.",
+    "scroll_style": "Likely subtle section progression rather than elaborate reveal choreography.",
+    "transition_intensity": "Low to moderate.",
+    "timing_guess": "Probably calm UI timings around 150ms to 300ms.",
+    "notable_patterns": [
+      "product selector row",
+      "resource gallery slide controls",
+      "project metric selector",
+      "possible hero visual animation"
+    ]
+  },
+  "technical_signals": {
+    "webgl_or_3d": "Canvas elements and an automated WebGL-context detection suggest some advanced rendering or canvas-assisted visuals.",
+    "animation_stack_guess": [
+      "unknown bundled app stack"
+    ],
+    "rendering_notes": "The site appears to rely on a small custom app bundle plus possible canvas/WebGL usage for hero or data visuals, without heavy media overload.",
+    "performance_notes": "If canvas or WebGL is used, it should remain optional and lightweight because the overall design benefits from crisp simplicity."
+  },
+  "observed": [
+    {
+      "category": "layout",
+      "statement": "The page opens with an unusually sparse centered hero, then shifts into a dark structured product-system section with clear border divisions.",
+      "confidence": "high"
+    },
+    {
+      "category": "color_surface",
+      "statement": "The palette is dominated by black, white, gray, and a vivid purple-blue accent used selectively.",
+      "confidence": "high"
+    },
+    {
+      "category": "components",
+      "statement": "Product selection, metric selection, gallery controls, and newsletter signup are all visible in the captured UI.",
+      "confidence": "high"
+    },
+    {
+      "category": "technical_signals",
+      "statement": "DOM notes show three canvas elements and automated inspection reported a WebGL context.",
+      "confidence": "high"
+    },
+    {
+      "category": "copy",
+      "statement": "Copy is concise and mission-led, with understated exploration CTAs instead of aggressive conversion language.",
+      "confidence": "high"
+    }
+  ],
+  "inferred": [
+    {
+      "category": "technical_signals",
+      "statement": "Canvas or WebGL is likely used for a lightweight hero or data visual effect rather than for a heavy immersive scene.",
+      "confidence": "medium"
+    },
+    {
+      "category": "layout",
+      "statement": "The sparse hero is intentionally designed to make the darker product-system block land with more emphasis.",
+      "confidence": "medium"
+    },
+    {
+      "category": "components",
+      "statement": "A small set of primitives such as line grids, dark panels, and accent selectors likely drives most of the visual system.",
+      "confidence": "medium"
+    }
+  ],
+  "uncertain": [
+    {
+      "category": "technical_signals",
+      "statement": "The exact framework, motion library, and purpose of the detected WebGL context are not confirmed.",
+      "confidence": "low"
+    },
+    {
+      "category": "motion",
+      "statement": "Hover behavior, scroll treatment, and reduced-motion fallbacks were not manually tested.",
+      "confidence": "low"
+    }
+  ],
+  "reusable_rules": [
+    "Use strong top-of-page restraint when you want later product sections to feel sharper.",
+    "Build technical credibility with concise product descriptions and believable ecosystem metrics.",
+    "Make borders and grid lines part of the identity rather than just separators.",
+    "Limit accent color to a few high-value emphasis points.",
+    "Let dark sections carry complexity while bright sections reset the reader.",
+    "Use selectors to compare related products inside one stable layout frame."
+  ],
+  "implementation_notes": [
+    "Implement the portfolio section as an accessible selector row controlling one shared detail layout.",
+    "Use a spacing and border token system to maintain the engineered aesthetic consistently.",
+    "Keep any canvas or WebGL effect optional so the page still works as static content.",
+    "Build the gallery with clear snap points and explicit slide controls.",
+    "Preserve contrast and legibility inside the dark sections, especially on mobile."
+  ],
+  "caveats": [
+    "Sparse layouts feel empty fast if typography and spacing are not extremely disciplined.",
+    "Dark technical sections need enough visual anchors to avoid monotony.",
+    "Canvas or WebGL effects should not be added without a clear narrative role.",
+    "Minimal copy may underserve audiences who need more onboarding context."
+  ],
+  "scores": {
+    "visual_polish": 5,
+    "clarity": 4,
+    "hierarchy": 5,
+    "copy_quality": 4,
+    "motion_quality": 4,
+    "component_quality": 4,
+    "technical_ambition": 4,
+    "pattern_reusability": 5
+  }
+}

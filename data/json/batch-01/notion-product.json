@@ -1,0 +1,158 @@
+{
+  "site": "notion-product",
+  "url": "https://www.notion.com/product",
+  "archetypes": [
+    "product-system-ui",
+    "minimal-saas-clarity"
+  ],
+  "summary": "Notion presents a broad AI workspace through a bright, modular, product-system homepage that combines strict clarity with playful illustration and highly reusable bento-style content packaging.",
+  "layout": {
+    "container_strategy": "Narrow centered hero expanding into modular card grids and wide product frames.",
+    "grid_style": "Structured bento-style grid with varied spans, testimonial cards, and modular CTA blocks.",
+    "section_spacing": "Generous whitespace with soft background changes and clear section resets.",
+    "density": "Low to moderate, with complexity distributed across many small modules.",
+    "alignment": "Mostly centered hero content and left-aligned copy inside cards.",
+    "responsive_notes": "Mobile appears to reorder or reframe the top narrative instead of only stacking desktop sections."
+  },
+  "typography": {
+    "style": "Neutral sans-serif with large bold headlines and minimal decoration.",
+    "hero_scale": "Large bold headline split across two lines for immediate clarity.",
+    "body_scale": "Compact and readable with short plain-language supporting text.",
+    "line_length": "Controlled, especially in hero and card copy.",
+    "hierarchy_strategy": "Short punchy headlines, then task-oriented cards and literal CTA labels."
+  },
+  "color_surface": {
+    "palette": "White, black, soft gray, and restrained blue accents.",
+    "background_strategy": "Mostly bright neutral backgrounds with occasional warm off-white section breaks.",
+    "surface_strategy": "Rounded white cards with thin borders, light shadows, and sparse chrome.",
+    "contrast_style": "High contrast for headlines and CTAs, moderate contrast for secondary UI labels.",
+    "special_effects": [
+      "playful illustrations",
+      "video demos",
+      "bento card collage"
+    ]
+  },
+  "components": {
+    "nav": "Simple top nav with dropdowns, enterprise/pricing links, and strong CTA separation.",
+    "buttons": "Rounded solid primary CTA, pale secondary CTA, and smaller inline action links.",
+    "cards": "Bento-style product cards, testimonial cards, and compact utility cards with mixed media.",
+    "feature_sections": "Module-based product stories, calculator section, trust grid, and use-case explorer.",
+    "forms": "A pricing calculator uses multiple checkboxes plus a team-size input.",
+    "footer": "Broad multi-column footer tied to Notion products, resources, and company links."
+  },
+  "copy": {
+    "tone": "Direct, confident, practical, and product-led.",
+    "headline_style": "Short declarative benefit statements with low jargon.",
+    "cta_style": "Literal next-step labels such as get free, request demo, see pricing, and explore more.",
+    "proof_style": "Brand logos, customer stories, market stats, and modular outcome snippets."
+  },
+  "motion": {
+    "overall_style": "Interactive but restrained, with carousels, play controls, and stateful widgets rather than flashy transitions.",
+    "hover_style": "Not confirmed from the available evidence.",
+    "scroll_style": "Likely section reveals and media transitions, but direct confirmation is missing.",
+    "transition_intensity": "Moderate.",
+    "timing_guess": "Probably standard SaaS UI timings around 150ms to 300ms with smooth easing.",
+    "notable_patterns": [
+      "tabbed agent modules",
+      "video play controls",
+      "interactive savings calculator",
+      "slide indicators"
+    ]
+  },
+  "technical_signals": {
+    "webgl_or_3d": "No direct WebGL or 3D evidence in the capture.",
+    "animation_stack_guess": [
+      "Next.js marketing stack",
+      "unknown motion library"
+    ],
+    "rendering_notes": "The site clearly uses a Next.js build and mixes static images, videos, and interactive UI widgets without advanced rendering cues.",
+    "performance_notes": "Video-heavy sections and rich card media should rely on lazy-loading, posters, and careful mobile payload control."
+  },
+  "observed": [
+    {
+      "category": "layout",
+      "statement": "The page moves from a narrow centered hero into structured bento-style grids and modular card sections.",
+      "confidence": "high"
+    },
+    {
+      "category": "components",
+      "statement": "A checkbox-driven calculator and multiple tabbed or carousel-like product modules are present on the page.",
+      "confidence": "high"
+    },
+    {
+      "category": "technical_signals",
+      "statement": "Script references include a Next.js build, and DOM notes show multiple video elements.",
+      "confidence": "high"
+    },
+    {
+      "category": "copy",
+      "statement": "Copy stays literal and workflow-focused, with straightforward CTA labels and low-jargon benefit framing.",
+      "confidence": "high"
+    },
+    {
+      "category": "layout",
+      "statement": "The captured mobile version uses a different top-story emphasis than desktop, foregrounding Custom Agents and a different hero message.",
+      "confidence": "high"
+    }
+  ],
+  "inferred": [
+    {
+      "category": "components",
+      "statement": "The design system is likely highly componentized so campaign teams can rearrange card-based stories without redesigning the page shell.",
+      "confidence": "medium"
+    },
+    {
+      "category": "motion",
+      "statement": "Video and carousel behavior are probably used selectively to add richness while keeping the overall page lightweight and readable.",
+      "confidence": "medium"
+    },
+    {
+      "category": "layout",
+      "statement": "Mobile narrative reprioritization is likely intentional campaign design rather than a pure responsive collapse.",
+      "confidence": "medium"
+    }
+  ],
+  "uncertain": [
+    {
+      "category": "motion",
+      "statement": "Exact hover details, autoplay behavior, and reduced-motion handling are not confirmed by the capture.",
+      "confidence": "low"
+    },
+    {
+      "category": "technical_signals",
+      "statement": "The exact motion library is not identified from the available evidence.",
+      "confidence": "low"
+    }
+  ],
+  "reusable_rules": [
+    "Start with a stark high-clarity hero before introducing richer modular sections.",
+    "Break broad platforms into small product stories that each explain one job-to-be-done.",
+    "Use bento-style grids only when each tile has a clear narrative role.",
+    "Keep value calculators simple enough to explain pricing or consolidation in one glance.",
+    "Let accent color live inside modules while keeping the overall shell neutral.",
+    "Write CTA labels as literal next steps, not as abstract slogans."
+  ],
+  "implementation_notes": [
+    "Use a small set of card primitives with configurable media, copy, CTA, and illustration slots.",
+    "Implement bento layouts with explicit CSS grid spans rather than loose masonry.",
+    "Model the savings calculator as controlled checkbox groups and a single numeric input feeding derived totals.",
+    "Lazy-load videos and provide poster images and reduced-motion-friendly alternatives.",
+    "Consider mobile narrative reordering when the desktop story becomes too broad or dense."
+  ],
+  "caveats": [
+    "Minimal white layouts feel weak if they are not backed by strong demo content and spacing discipline.",
+    "Bento systems become chaotic quickly when tile hierarchy is unclear.",
+    "Playful illustration should be systemized; ad hoc illustration styles create noise.",
+    "Pricing or savings calculators should not overstate assumptions or they lose trust."
+  ],
+  "scores": {
+    "visual_polish": 5,
+    "clarity": 5,
+    "hierarchy": 5,
+    "copy_quality": 4,
+    "motion_quality": 4,
+    "component_quality": 5,
+    "technical_ambition": 4,
+    "pattern_reusability": 5
+  }
+}
