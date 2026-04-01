@@ -6,6 +6,9 @@
     "capture:bootstrap-libs": "bun run scripts/bootstrap-browser-libs.ts",
     "capture:check": "bun run scripts/check-capture-env.ts",
     "capture:site": "bun run scripts/capture-site.ts",
-    "capture:batch": "bun run scripts/run-capture-batch.ts --config config/batches/batch-01.json"
+    "capture:batch": "bun run scripts/run-capture-batch.ts --config config/batches/batch-01.json",
+    "analysis:site": "bun run scripts/prepare-analysis-site.ts",
+    "analysis:prepare": "bun run scripts/prepare-analysis-batch.ts --batch batch-01",
+    "analysis:validate": "bun run scripts/validate-site-summary.ts"
   }
 }

@@ -2,7 +2,7 @@
 
 ## Status
 
-Planned
+In Progress
 
 ## Problem
 
@@ -50,6 +50,7 @@ Create the first operational pipeline for:
 
 - browser capture workflow
 - populated `data/captures/` for batch one
+- analysis packet generator for captured sites
 - five markdown site reports
 - five JSON summaries
 
@@ -58,6 +59,9 @@ Create the first operational pipeline for:
 - The baseline capture workflow now runs through Bun scripts rather than Python.
 - In this environment, `agent-browser` may require locally extracted Chrome runtime libraries before preflight passes.
 - The repo includes `bun run capture:bootstrap-libs` plus `scripts/chrome-with-libs.sh` as a non-root fallback for Arch-based setups.
+- Batch `batch-01` capture artifacts now exist for Railway, Notion Product, PostHog, VoidZero, and Airbnb.
+- The repo now includes `bun run analysis:prepare` to generate one analysis packet per captured site in `data/prompts/<batch>/`.
+- The repo now includes `bun run analysis:validate --file <path>` for lightweight JSON summary validation.
 
 ## Success Metrics
 
@@ -74,7 +78,7 @@ Create the first operational pipeline for:
 
 ## Next Tasks
 
-1. Choose a browser automation approach.
-2. Capture the first five sites.
-3. Validate the capture contract against real evidence gaps.
-4. Generate reports and JSON summaries.
+1. Generate the five site reports from the prepared analysis packets.
+2. Validate the five JSON summaries.
+3. Write `data/syntheses/batch-01.md`.
+4. Feed the completed reports into PRD-002 pattern extraction.

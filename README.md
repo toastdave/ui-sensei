@@ -9,7 +9,9 @@ The goal is not to clone sites. The goal is to capture what makes strong sites f
 - `docs/plan.md` - master setup and milestone plan
 - `docs/architecture.md` - agent roles and data flow
 - `docs/runbooks/capture-batch.md` - step-by-step guide for running a capture batch
+- `docs/runbooks/analyze-batch.md` - step-by-step guide for turning captures into reports
 - `skills/frontend-design-researcher.md` - research skill spec for local models
+- `prompts/analysis-agent-prompt.md` - execution prompt for turning one packet into outputs
 - `prompts/` - reusable prompts for research, build, and critique agents
 - `schemas/` - machine-readable contracts for captures, reports, patterns, archetypes, and build specs
 - `docs/prds/` - phased implementation docs so other agents can continue work cleanly
@@ -50,6 +52,7 @@ Then produce:
 - If preflight fails on this Arch-based setup, run `bun run capture:bootstrap-libs`
 - Run `bun run capture:check`
 - Run `bun run capture:batch`
+- Run `bun run analysis:prepare`
 - Use `skills/frontend-design-researcher.md` with `prompts/master-research-prompt.md`
 - Save outputs into `data/`
 - Use the PRDs in `docs/prds/` to continue the roadmap

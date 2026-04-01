@@ -59,11 +59,13 @@ Turn site-level observations into a reusable pattern library and a set of archet
 ## Dependencies
 
 - batch one reports
+- `data/prompts/batch-01/_analysis-queue.md`
 - `schemas/pattern.schema.json`
 - `schemas/archetype.schema.json`
 
 ## Next Tasks
 
-1. Define the first pattern extraction pass.
-2. Build `frontend_design_rules_v1.md` from repeated findings.
-3. Create at least two archetype files from batch one.
+1. Wait for all batch-one site reports and JSON summaries to land.
+2. Define the first pattern extraction pass.
+3. Build `frontend_design_rules_v1.md` from repeated findings.
+4. Create at least two archetype files from batch one.
