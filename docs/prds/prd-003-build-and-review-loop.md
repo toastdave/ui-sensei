@@ -2,7 +2,7 @@
 
 ## Status
 
-In Progress - dependencies now exist for the first builder test
+In Progress - first build specs and builder test plan created
 
 ## Problem
 
@@ -41,6 +41,14 @@ Create the loop that lets builder agents consume archetype guidance and lets cri
 - critique prompt
 - first build review example
 
+## Current Progress
+
+- `schemas/build-spec.schema.json` already exists.
+- Build-spec validation now exists via `scripts/validate-build-spec.ts` and `bun run build:validate --file <path>`.
+- Starter build specs now exist in `data/prompts/build-specs/`.
+- A first builder test handoff now exists in `data/prompts/build-specs/_first-builder-test.md`.
+- The first builder test plan now exists in `data/evaluations/first-builder-test-plan.md`.
+
 ## Success Metrics
 
 - Builder agents produce stronger output with the build spec than without it.
@@ -59,7 +67,7 @@ Create the loop that lets builder agents consume archetype guidance and lets cri
 
 ## Next Tasks
 
-1. Create the first build spec from `developer-tool-modern` or `product-ui-system`.
-2. Use it to generate one homepage.
-3. Review the output using `docs/rubrics/build-review-rubric.md` and feed misses back into the rules.
+1. Use `data/prompts/build-specs/developer-tool-modern-ai-release-copilot.json` to generate the first homepage plan or coded page.
+2. Save the builder output to `data/evaluations/first-builder-test-build-notes.md` or a target implementation repo.
+3. Review the output using `docs/rubrics/build-review-rubric.md` and save the result to `data/evaluations/first-builder-test-review.md`.
 4. Record which patterns were strong enough to reuse and which archetype rules need refinement.

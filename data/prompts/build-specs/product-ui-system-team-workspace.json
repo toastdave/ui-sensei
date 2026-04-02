@@ -1,0 +1,69 @@
+{
+  "project": "Northstar Team Workspace Homepage",
+  "archetype": "product-ui-system",
+  "product_context": "A homepage for a collaborative planning workspace used by product, design, and operations teams to align docs, tasks, roadmaps, and recurring reviews.",
+  "design_goals": [
+    "Make a broad workspace product feel coherent and easy to adopt.",
+    "Show several workflows without losing focus or becoming card soup.",
+    "Feel polished and modular rather than expressive for its own sake."
+  ],
+  "constraints": [
+    "Responsive across desktop and mobile with mobile-specific prioritization.",
+    "Avoid direct visual overlap with Notion or Airbnb.",
+    "Use reusable modules instead of many bespoke sections.",
+    "Keep implementation practical in a standard web app stack."
+  ],
+  "layout_rules": [
+    "Use a stable shell with a few repeatable module types rather than many bespoke sections.",
+    "Alternate between promise, proof, and interaction modules to maintain pace.",
+    "Let mobile reprioritize content and interaction patterns instead of only stacking desktop layouts."
+  ],
+  "typography_rules": [
+    "Use concise headlines and tightly controlled support copy.",
+    "Rely on hierarchy, weight, and spacing rather than expressive display typography everywhere.",
+    "Keep supporting labels quiet but legible."
+  ],
+  "component_rules": [
+    "Use a modular hero, one calculator or quantified-proof block, one selector-driven workflow section, and one structured footer.",
+    "Design around repeatable cards and product-like modules.",
+    "Keep one dominant CTA visible throughout the hero and first proof section."
+  ],
+  "motion_rules": [
+    "Use motion to switch panes, expand views, or confirm module changes.",
+    "Keep autoplay and carousel behavior explicit and controllable.",
+    "Reduce motion intensity when clarity matters more than spectacle."
+  ],
+  "copy_rules": [
+    "Keep copy practical and workflow-driven.",
+    "Translate platform value into team tasks, alignment, and time saved.",
+    "Use simple action labels such as Try free, Request a demo, Explore workflows, or See pricing."
+  ],
+  "accessibility_rules": [
+    "Use semantic tabs, buttons, inputs, and lists for modules.",
+    "Preserve focus order across cards, overlays, and selectors.",
+    "Make any calculator or carousel controls keyboard-safe and screen-reader clear."
+  ],
+  "performance_rules": [
+    "Code-split heavier media or interactive modules.",
+    "Prefer a small number of reusable shells over many custom interactions.",
+    "Defer noncritical media until user intent is clear."
+  ],
+  "approved_patterns": [
+    "hero-product-proof-shell",
+    "bento-product-story-grid",
+    "portfolio-selector-detail-pane",
+    "savings-calculator-module",
+    "gallery-with-explicit-slide-controls",
+    "structured-utility-footer"
+  ],
+  "anti_patterns": [
+    "Overbuilding the page with too many equally weighted cards.",
+    "Using carousels where a simple stacked explanation would be clearer.",
+    "Making mobile a compressed desktop replica.",
+    "Using cost-savings math that feels inflated or untrustworthy."
+  ],
+  "notes": [
+    "Recommended stack: Next.js or Vite with React, plus a disciplined utility CSS or component system.",
+    "Recommended first build output: hero, modular workflow grid, selector-led feature pane, quantified proof section, testimonial or trust module, footer."
+  ]
+}

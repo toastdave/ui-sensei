@@ -175,7 +175,8 @@ Deliver:
 
 Status:
 
-- Ready to begin: dependencies now exist in `data/patterns/`, `data/archetypes/`, and `frontend_design_rules_v1.md`
+- In progress: starter build specs and the first builder test plan now exist
+- Remaining: generate the first homepage build and complete the first review artifact
 
 ### Milestone 5 - Evaluation loop
 

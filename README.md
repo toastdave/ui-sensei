@@ -10,6 +10,7 @@ The goal is not to clone sites. The goal is to capture what makes strong sites f
 - `docs/architecture.md` - agent roles and data flow
 - `docs/runbooks/capture-batch.md` - step-by-step guide for running a capture batch
 - `docs/runbooks/analyze-batch.md` - step-by-step guide for turning captures into reports
+- `docs/runbooks/build-from-spec.md` - step-by-step guide for first builder tests
 - `skills/frontend-design-researcher.md` - research skill spec for local models
 - `prompts/analysis-agent-prompt.md` - execution prompt for turning one packet into outputs
 - `prompts/` - reusable prompts for research, build, and critique agents
@@ -53,6 +54,7 @@ Then produce:
 - Run `bun run capture:check`
 - Run `bun run capture:batch`
 - Run `bun run analysis:prepare`
+- Run `bun run build:validate --file data/prompts/build-specs/developer-tool-modern-ai-release-copilot.json`
 - Use `skills/frontend-design-researcher.md` with `prompts/master-research-prompt.md`
 - Save outputs into `data/`
 - Use the PRDs in `docs/prds/` to continue the roadmap
