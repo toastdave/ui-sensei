@@ -175,8 +175,8 @@ Deliver:
 
 Status:
 
-- In progress: starter build specs, first builder output notes, and first critique artifact now exist
-- Remaining: generate the first coded homepage and run a second critique against a real implementation
+- In progress: starter build specs, first builder output notes, first critique artifact, coded prototype, implementation critique, and second-archetype comparison notes now exist
+- Remaining: automate the build-review handoff further and add another coded implementation on a second archetype
 
 ### Milestone 5 - Evaluation loop
 

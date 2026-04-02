@@ -10,6 +10,7 @@
     "analysis:site": "bun run scripts/prepare-analysis-site.ts",
     "analysis:prepare": "bun run scripts/prepare-analysis-batch.ts --batch batch-01",
     "analysis:validate": "bun run scripts/validate-site-summary.ts",
-    "build:validate": "bun run scripts/validate-build-spec.ts"
+    "build:validate": "bun run scripts/validate-build-spec.ts",
+    "preview:first-test": "bun run scripts/serve-static.ts --dir prototypes/pulse-forge-release-copilot --port 4173"
   }
 }

@@ -45,6 +45,18 @@ Expected builder outputs for the first pass:
 - one token and motion proposal
 - optionally one code artifact if the target repo/framework exists
 
+For the current first test, the coded prototype now exists in:
+
+- `prototypes/pulse-forge-release-copilot/index.html`
+- `prototypes/pulse-forge-release-copilot/styles.css`
+- `prototypes/pulse-forge-release-copilot/app.js`
+
+Preview it with:
+
+```bash
+bun run preview:first-test
+```
+
 ### 5. Review the result
 
 Use:
@@ -54,8 +66,14 @@ Use:
 
 Save the critique to `data/evaluations/`.
 
+Current review artifacts include:
+
+- `data/evaluations/first-builder-test-review.md`
+- `data/evaluations/first-builder-test-implementation-review.md`
+
 ## Notes
 
 - The current repo is a research system, not a shipping frontend app, so the first builder pass is intentionally spec-first.
+- The first builder test now includes a lightweight coded prototype, which makes this runbook usable for both spec-only and implementation-backed reviews.
 - If the target implementation repo is different, copy the chosen build spec and archetype packet into that workspace before coding.
 - Feed review misses back into `data/patterns/` or `data/archetypes/` rather than only editing the one-off build.

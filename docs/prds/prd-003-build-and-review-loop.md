@@ -2,7 +2,7 @@
 
 ## Status
 
-In Progress - first builder test plan, output, and critique created
+In Progress - first builder test now includes a coded prototype and implementation critique
 
 ## Problem
 
@@ -50,6 +50,9 @@ Create the loop that lets builder agents consume archetype guidance and lets cri
 - The first builder test plan now exists in `data/evaluations/first-builder-test-plan.md`.
 - The first builder output now exists in `data/evaluations/first-builder-test-build-notes.md`.
 - The first critique example now exists in `data/evaluations/first-builder-test-review.md`.
+- A first coded prototype now exists in `prototypes/pulse-forge-release-copilot/`.
+- An implementation-backed critique now exists in `data/evaluations/first-builder-test-implementation-review.md`.
+- A second archetype comparison pass now exists in `data/evaluations/second-builder-test-build-notes.md` and `data/evaluations/second-builder-test-review.md`.
 
 ## Success Metrics
 
@@ -69,7 +72,7 @@ Create the loop that lets builder agents consume archetype guidance and lets cri
 
 ## Next Tasks
 
-1. Convert the first builder test from planning notes into a coded homepage in a target implementation repo.
-2. Run a second critique against the implemented page, not only the build notes.
-3. Add a second build spec from `product-ui-system` and compare results between archetypes.
-4. Record which patterns were strong enough to reuse and which archetype rules need refinement.
+1. Turn the build-spec and critique loop into reusable automation or slash-command style workflows.
+2. Record which patterns were strong enough to reuse and which archetype rules need refinement after two builder cycles.
+3. Promote the strongest prototype patterns into a more implementation-ready starter kit if future repos need code seeds.
+4. Add a future coded implementation pass for the `product-ui-system` comparison test.
