@@ -162,8 +162,8 @@ Deliver:
 
 Status:
 
-- In progress: `data/syntheses/batch-01.md` and `frontend_design_rules_v1.md` are complete
-- Remaining: initial pattern library, anti-pattern library, and first archetype files
+- Complete for the first pass: synthesis, rules, starter pattern library, anti-pattern list, and first archetype files now exist
+- Remaining: expand the pattern library depth and refine archetypes with future batches
 
 ### Milestone 4 - Builder integration
 
@@ -172,6 +172,10 @@ Deliver:
 - builder consumption format
 - build spec format
 - first generated homepage using archetype guidance
+
+Status:
+
+- Ready to begin: dependencies now exist in `data/patterns/`, `data/archetypes/`, and `frontend_design_rules_v1.md`
 
 ### Milestone 5 - Evaluation loop
 

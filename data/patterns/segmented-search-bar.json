@@ -1,0 +1,35 @@
+{
+  "pattern_name": "segmented-search-bar",
+  "category": "component",
+  "description": "Use a single rounded search shell split into a few high-signal inputs and one dominant submit action.",
+  "observed_on": [
+    "airbnb"
+  ],
+  "applies_to": [
+    "marketplace-system",
+    "product-ui-system"
+  ],
+  "transferability": "contextual",
+  "implementation_cost": "medium",
+  "ux_value": "high",
+  "a11y_risk": "medium",
+  "performance_risk": "low",
+  "evidence_notes": [
+    "Airbnb uses a segmented desktop search shell and collapses it to a single search trigger on mobile."
+  ],
+  "rules": [
+    "Only include the minimum inputs needed to start the search flow.",
+    "Make one submit action visually dominant inside the search shell.",
+    "Collapse complex segmented search into a simpler trigger on mobile when space is limited."
+  ],
+  "implementation_notes": [
+    "Build as a flex container with internal dividers and a fixed submit button zone.",
+    "Use semantic labels and clear focus styles for each segment.",
+    "Prefer opening advanced search details in a sheet or modal on mobile rather than shrinking every field into one row."
+  ],
+  "avoid_when": [
+    "The workflow does not begin with a search task.",
+    "The product requires too many required fields up front.",
+    "The segmentation would create cramped or ambiguous labels on smaller screens."
+  ]
+}

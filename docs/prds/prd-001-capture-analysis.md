@@ -2,7 +2,7 @@
 
 ## Status
 
-In Progress - batch-01 analysis outputs complete, pipeline still open for future batches
+In Progress - batch-01 capture and analysis complete, pipeline still open for future batches
 
 ## Problem
 
@@ -82,6 +82,6 @@ Create the first operational pipeline for:
 
 ## Next Tasks
 
-1. Feed the completed batch-01 reports and synthesis into PRD-002 pattern extraction.
-2. Create the first atomic pattern records and archetype files.
-3. Reuse the same validated analysis workflow for batch-02 and later batches.
+1. Reuse the same validated capture and analysis workflow for batch-02 and later batches.
+2. Improve capture fidelity for motion-heavy sites with a secondary interaction pass.
+3. Keep the analysis packet generator aligned with any future schema changes.

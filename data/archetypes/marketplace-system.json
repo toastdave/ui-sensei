@@ -1,0 +1,63 @@
+{
+  "name": "marketplace-system",
+  "summary": "A task-first marketplace archetype that prioritizes search, taxonomy, cards, and trust surfaces over long-form narrative storytelling.",
+  "goals": [
+    "Move users into search or browse flows quickly.",
+    "Keep dense inventory or taxonomy legible across desktop and mobile.",
+    "Use a small set of repeatable shells to support scale and personalization."
+  ],
+  "source_sites": [
+    "airbnb"
+  ],
+  "layout_rules": [
+    "Make search or browsing intent the dominant first-screen action.",
+    "Use desktop space for breadth and discovery, but shift mobile toward quick entry and high-signal cards.",
+    "Organize dense discovery content with tabs, columns, and repeatable card shells instead of decorative wrappers."
+  ],
+  "typography_rules": [
+    "Use neutral product typography that supports speed and scan clarity.",
+    "Keep section headlines functional and concise.",
+    "Use quieter secondary text for metadata and pricing details without sacrificing readability."
+  ],
+  "component_rules": [
+    "Invest in the search shell, inventory card, and category tab system before secondary storytelling modules.",
+    "Use generous radius, stable image ratios, and clear card metadata ordering.",
+    "Treat banners, trust modals, and locale controls as utility surfaces, not decorative interruptions."
+  ],
+  "motion_rules": [
+    "Keep motion restrained and state-driven around sheets, tabs, search expansion, and card actions.",
+    "Do not let overlays or promos compete with the booking or browse flow.",
+    "Prioritize responsiveness and clarity over expressive transitions."
+  ],
+  "copy_rules": [
+    "Keep labels short, direct, and operational.",
+    "Use policy or trust copy only where it removes friction from the next user action.",
+    "Let taxonomy and inventory do most of the persuasion work."
+  ],
+  "accessibility_rules": [
+    "Preserve skip links, semantic navigation, and tab semantics in highly customized UI shells.",
+    "Ensure card controls and overlays have explicit labels and dismiss paths.",
+    "Do not rely on color, badges, or hover alone to communicate state."
+  ],
+  "performance_rules": [
+    "Defer noncritical media and offscreen video aggressively.",
+    "Keep card grids responsive before layering on personalization or promo surfaces.",
+    "Treat mobile overlay stacking as a performance and usability budget, not just a marketing slot."
+  ],
+  "preferred_patterns": [
+    "hero-product-proof-shell",
+    "segmented-search-bar",
+    "gallery-with-explicit-slide-controls",
+    "structured-utility-footer"
+  ],
+  "anti_patterns": [
+    "Using too many promotional overlays on mobile.",
+    "Overloading the first screen with taxonomy before a clear search or browse action exists.",
+    "Letting dense destination or inventory modules collapse into clutter on smaller screens.",
+    "Copying a signature marketplace accent system too literally from another brand."
+  ],
+  "notes": [
+    "This first version is primarily derived from Airbnb, so future marketplace research batches should broaden and refine it.",
+    "It is best suited to search-first products with repeatable inventory cards and category navigation."
+  ]
+}

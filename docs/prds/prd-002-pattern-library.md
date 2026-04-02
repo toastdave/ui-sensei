@@ -2,7 +2,7 @@
 
 ## Status
 
-In Progress
+In Progress - first batch-one pattern and archetype pass created
 
 ## Problem
 
@@ -41,6 +41,14 @@ Turn site-level observations into a reusable pattern library and a set of archet
 - first synthesis report
 - first archetype files
 
+## Current Progress
+
+- Batch-one synthesis is complete in `data/syntheses/batch-01.md`.
+- First rule baseline is complete in `frontend_design_rules_v1.md`.
+- Initial pattern records now exist in `data/patterns/`.
+- Initial anti-pattern guidance now exists in `data/patterns/anti-patterns-batch-01.md`.
+- Initial archetype files now exist in `data/archetypes/developer-tool-modern.json`, `data/archetypes/product-ui-system.json`, and `data/archetypes/marketplace-system.json`.
+
 ## Candidate Archetypes
 
 - `saas-clarity`
@@ -67,7 +75,7 @@ Turn site-level observations into a reusable pattern library and a set of archet
 
 ## Next Tasks
 
-1. Extract the first pattern pass from the completed batch-01 reports and synthesis.
-2. Create at least two archetype files from batch-01, starting with `developer-tool-modern` and `product-ui-system`.
-3. Convert the shared rules in `frontend_design_rules_v1.md` into smaller atomic records.
-4. Record anti-pattern entries for overly brand-specific shells, weak faux-desktop accessibility, and unnecessary rendering effects.
+1. Expand the first pattern pass from 10 starter records toward the 20-40 target.
+2. Add validation or linting for pattern and archetype JSON files.
+3. Refine archetypes with batch-02 evidence, especially `marketplace-system` and `minimal-saas-clarity`.
+4. Feed the current archetypes into PRD-003 to generate the first build spec and homepage test.

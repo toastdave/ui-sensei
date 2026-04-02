@@ -2,7 +2,7 @@
 
 ## Status
 
-Planned
+In Progress - dependencies now exist for the first builder test
 
 ## Problem
 
@@ -54,10 +54,12 @@ Create the loop that lets builder agents consume archetype guidance and lets cri
 - review rubric
 - `frontend_design_rules_v1.md`
 - completed batch syntheses
+- initial archetype files in `data/archetypes/`
+- starter pattern library in `data/patterns/`
 
 ## Next Tasks
 
-1. Wait for the first archetype files and extracted pattern library from batch-01.
-2. Create the first build spec from `developer-tool-modern` or `product-ui-system`.
-3. Use it to generate one homepage.
-4. Review the output using `docs/rubrics/build-review-rubric.md` and feed misses back into the rules.
+1. Create the first build spec from `developer-tool-modern` or `product-ui-system`.
+2. Use it to generate one homepage.
+3. Review the output using `docs/rubrics/build-review-rubric.md` and feed misses back into the rules.
+4. Record which patterns were strong enough to reuse and which archetype rules need refinement.

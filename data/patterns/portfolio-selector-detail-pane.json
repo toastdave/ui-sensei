@@ -1,0 +1,39 @@
+{
+  "pattern_name": "portfolio-selector-detail-pane",
+  "category": "component",
+  "description": "Let users switch between several related products or capabilities using a compact selector that drives one focused detail pane.",
+  "observed_on": [
+    "railway",
+    "voidzero",
+    "notion-product"
+  ],
+  "applies_to": [
+    "developer-tool-modern",
+    "product-ui-system"
+  ],
+  "transferability": "universal",
+  "implementation_cost": "medium",
+  "ux_value": "high",
+  "a11y_risk": "medium",
+  "performance_risk": "low",
+  "evidence_notes": [
+    "Railway uses phase tabs to switch product narratives.",
+    "VoidZero uses a multi-product selector to spotlight one tool at a time.",
+    "Notion uses tabbed feature modules and carousel-like selectors for AI capabilities."
+  ],
+  "rules": [
+    "Keep one focused pane active at a time so the user is not comparing everything at once.",
+    "Use short selector labels and concise supporting copy in the pane.",
+    "Make the active state obvious through contrast, underline, or surface changes."
+  ],
+  "implementation_notes": [
+    "Implement with accessible tabs or segmented controls using proper roles and keyboard support.",
+    "Pair each pane with one clear CTA and one proof block.",
+    "Collapse large selector sets or convert them to swipeable rails on smaller screens."
+  ],
+  "avoid_when": [
+    "The number of options is too high for quick comparison.",
+    "Every option requires a very different layout and breaks shell consistency.",
+    "The active pane lacks enough detail to justify the interaction."
+  ]
+}

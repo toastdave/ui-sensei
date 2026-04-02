@@ -1,0 +1,35 @@
+{
+  "pattern_name": "bento-product-story-grid",
+  "category": "component",
+  "description": "Organize multiple product capabilities into a modular grid of distinct but stylistically related story blocks rather than a flat feature list.",
+  "observed_on": [
+    "notion-product"
+  ],
+  "applies_to": [
+    "product-ui-system",
+    "minimal-saas-clarity"
+  ],
+  "transferability": "contextual",
+  "implementation_cost": "medium",
+  "ux_value": "high",
+  "a11y_risk": "low",
+  "performance_risk": "medium",
+  "evidence_notes": [
+    "Notion uses modular cards and product-shaped sections to break AI and workflow capabilities into digestible blocks."
+  ],
+  "rules": [
+    "Use a small number of module shapes and repeat them consistently.",
+    "Give each module one job-to-be-done or one proof point.",
+    "Let the grid communicate breadth without flattening hierarchy."
+  ],
+  "implementation_notes": [
+    "Use CSS grid with controlled span variants and a shared card shell.",
+    "Keep internal card hierarchy tight: label, headline, one-paragraph explanation, one action.",
+    "Reorder or collapse the grid on mobile to protect reading flow."
+  ],
+  "avoid_when": [
+    "The content hierarchy is weak and every item looks equally important.",
+    "The grid is being used as decoration instead of information architecture.",
+    "Mobile would require excessive reorder logic for too little gain."
+  ]
+}
