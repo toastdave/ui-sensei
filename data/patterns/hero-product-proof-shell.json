@@ -27,6 +27,7 @@
   "rules": [
     "Place the primary user task or product value in the first screen.",
     "Support the hero with concrete product proof rather than abstract decoration alone.",
+    "Expose one dominant proof state at a time so the first scan stays fast.",
     "Keep the proof asset large enough to feel trustworthy and legible."
   ],
   "implementation_notes": [

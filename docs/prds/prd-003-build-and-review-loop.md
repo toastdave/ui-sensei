@@ -2,7 +2,7 @@
 
 ## Status
 
-In Progress - first build specs and builder test plan created
+In Progress - first builder test plan, output, and critique created
 
 ## Problem
 
@@ -48,6 +48,8 @@ Create the loop that lets builder agents consume archetype guidance and lets cri
 - Starter build specs now exist in `data/prompts/build-specs/`.
 - A first builder test handoff now exists in `data/prompts/build-specs/_first-builder-test.md`.
 - The first builder test plan now exists in `data/evaluations/first-builder-test-plan.md`.
+- The first builder output now exists in `data/evaluations/first-builder-test-build-notes.md`.
+- The first critique example now exists in `data/evaluations/first-builder-test-review.md`.
 
 ## Success Metrics
 
@@ -67,7 +69,7 @@ Create the loop that lets builder agents consume archetype guidance and lets cri
 
 ## Next Tasks
 
-1. Use `data/prompts/build-specs/developer-tool-modern-ai-release-copilot.json` to generate the first homepage plan or coded page.
-2. Save the builder output to `data/evaluations/first-builder-test-build-notes.md` or a target implementation repo.
-3. Review the output using `docs/rubrics/build-review-rubric.md` and save the result to `data/evaluations/first-builder-test-review.md`.
+1. Convert the first builder test from planning notes into a coded homepage in a target implementation repo.
+2. Run a second critique against the implemented page, not only the build notes.
+3. Add a second build spec from `product-ui-system` and compare results between archetypes.
 4. Record which patterns were strong enough to reuse and which archetype rules need refinement.

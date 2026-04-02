@@ -62,6 +62,7 @@
   ],
   "notes": [
     "This archetype fits developer tools, infrastructure products, and technical SaaS with strong product surfaces.",
-    "Voice can vary from calm and cinematic to playful and docs-native, but product truth should stay central."
+    "Voice can vary from calm and cinematic to playful and docs-native, but product truth should stay central.",
+    "Vary the density of secondary proof sections so the page does not become a stack of nearly identical dashboard shells."
   ]
 }

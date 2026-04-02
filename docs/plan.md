@@ -175,8 +175,8 @@ Deliver:
 
 Status:
 
-- In progress: starter build specs and the first builder test plan now exist
-- Remaining: generate the first homepage build and complete the first review artifact
+- In progress: starter build specs, first builder output notes, and first critique artifact now exist
+- Remaining: generate the first coded homepage and run a second critique against a real implementation
 
 ### Milestone 5 - Evaluation loop
 
