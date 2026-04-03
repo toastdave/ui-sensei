@@ -55,7 +55,8 @@ Then produce:
 - Run `bun run capture:batch`
 - Run `bun run analysis:prepare`
 - Run `bun run build:validate --file data/prompts/build-specs/developer-tool-modern-ai-release-copilot.json`
-- Run `bun run preview:first-test`
+- Run `bun run preview:first-test` on `http://localhost:43731`
+- Or run `bun run preview:first-test:tailscale` to start the preview and expose it on your tailnet in one step
 - Use `skills/frontend-design-researcher.md` with `prompts/master-research-prompt.md`
 - Save outputs into `data/`
 - Use the PRDs in `docs/prds/` to continue the roadmap

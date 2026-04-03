@@ -4,7 +4,7 @@
 - Selected archetype: `developer-tool-modern`
 - Build spec used: `data/prompts/build-specs/developer-tool-modern-ai-release-copilot.json`
 - Implemented prototype: `prototypes/pulse-forge-release-copilot/index.html`
-- Preview command: `bun run preview:first-test`
+- Preview command: `bun run preview:first-test` on `http://localhost:43731`
 
 ## Score Table
 

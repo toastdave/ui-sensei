@@ -57,6 +57,20 @@ Preview it with:
 bun run preview:first-test
 ```
 
+This serves the prototype on `http://localhost:43731` by default.
+
+To start the preview and expose it on your tailnet in one step, run:
+
+```bash
+bun run preview:first-test:tailscale
+```
+
+For a public Funnel URL instead, run:
+
+```bash
+bun run preview:first-test:funnel
+```
+
 ### 5. Review the result
 
 Use:
