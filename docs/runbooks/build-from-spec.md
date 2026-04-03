@@ -47,28 +47,34 @@ Expected builder outputs for the first pass:
 
 For the current first test, the coded prototype now exists in:
 
-- `prototypes/pulse-forge-release-copilot/index.html`
-- `prototypes/pulse-forge-release-copilot/styles.css`
-- `prototypes/pulse-forge-release-copilot/app.js`
+- `apps/showcase/src/lib/pages/PulseForgePage.svelte`
+- `apps/showcase/src/lib/pages/NorthstarPage.svelte`
+- `apps/showcase/src/lib/tests/registry.ts`
 
 Preview it with:
 
 ```bash
-bun run preview:first-test
+bun run showcase:dev
 ```
 
-This serves the prototype on `http://localhost:43731` by default.
+This serves the showcase app on `http://localhost:43731` by default.
+
+Open:
+
+- `http://localhost:43731/`
+- `http://localhost:43731/tests/pulse-forge-release-copilot`
+- `http://localhost:43731/tests/northstar-team-workspace`
 
 To start the preview and expose it on your tailnet in one step, run:
 
 ```bash
-bun run preview:first-test:tailscale
+bun run showcase:tailscale
 ```
 
 For a public Funnel URL instead, run:
 
 ```bash
-bun run preview:first-test:funnel
+bun run showcase:funnel
 ```
 
 ### 5. Review the result
@@ -84,10 +90,11 @@ Current review artifacts include:
 
 - `data/evaluations/first-builder-test-review.md`
 - `data/evaluations/first-builder-test-implementation-review.md`
+- `data/evaluations/second-builder-test-review.md`
 
 ## Notes
 
-- The current repo is a research system, not a shipping frontend app, so the first builder pass is intentionally spec-first.
-- The first builder test now includes a lightweight coded prototype, which makes this runbook usable for both spec-only and implementation-backed reviews.
+- The current repo is a research system, but `apps/showcase/` is now the canonical implementation surface for builder tests.
+- The runbook now supports both spec-only review and implementation-backed review through the same Svelte showcase app.
 - If the target implementation repo is different, copy the chosen build spec and archetype packet into that workspace before coding.
 - Feed review misses back into `data/patterns/` or `data/archetypes/` rather than only editing the one-off build.

@@ -3,8 +3,8 @@
 - Project name: `Pulse Forge AI Release Copilot Homepage`
 - Selected archetype: `developer-tool-modern`
 - Build spec used: `data/prompts/build-specs/developer-tool-modern-ai-release-copilot.json`
-- Implemented prototype: `prototypes/pulse-forge-release-copilot/index.html`
-- Preview command: `bun run preview:first-test` on `http://localhost:43731`
+- Implemented route: `apps/showcase/src/lib/pages/PulseForgePage.svelte`
+- Preview command: `bun run showcase:dev` on `http://localhost:43731/tests/pulse-forge-release-copilot`
 
 ## Score Table
 
@@ -56,4 +56,4 @@
 
 ## Outcome
 
-The flow now works through a real coded prototype: archetype to build spec to build notes to implementation to critique. The next consistency milestone is to run the same end-to-end flow on the `product-ui-system` build spec and compare which parts of the library transfer cleanly and which need archetype-specific refinements.
+The flow now works through a real coded showcase route: archetype to build spec to build notes to implementation to critique. The next consistency milestone is to automate the same end-to-end flow so future builder tests can land in the showcase app with less manual assembly.

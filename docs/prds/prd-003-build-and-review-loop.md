@@ -2,7 +2,7 @@
 
 ## Status
 
-In Progress - first builder test now includes a coded prototype and implementation critique
+In Progress - the builder loop now lands in a Vite + Svelte + Tailwind showcase app and has been proven on two archetypes
 
 ## Problem
 
@@ -50,9 +50,10 @@ Create the loop that lets builder agents consume archetype guidance and lets cri
 - The first builder test plan now exists in `data/evaluations/first-builder-test-plan.md`.
 - The first builder output now exists in `data/evaluations/first-builder-test-build-notes.md`.
 - The first critique example now exists in `data/evaluations/first-builder-test-review.md`.
-- A first coded prototype now exists in `prototypes/pulse-forge-release-copilot/`.
+- Implemented builder tests now live in `apps/showcase/`.
 - An implementation-backed critique now exists in `data/evaluations/first-builder-test-implementation-review.md`.
 - A second archetype comparison pass now exists in `data/evaluations/second-builder-test-build-notes.md` and `data/evaluations/second-builder-test-review.md`.
+- The showcase app can now be previewed locally or exposed on Tailscale through one command.
 
 ## Success Metrics
 
@@ -73,6 +74,6 @@ Create the loop that lets builder agents consume archetype guidance and lets cri
 ## Next Tasks
 
 1. Turn the build-spec and critique loop into reusable automation or slash-command style workflows.
-2. Record which patterns were strong enough to reuse and which archetype rules need refinement after two builder cycles.
-3. Promote the strongest prototype patterns into a more implementation-ready starter kit if future repos need code seeds.
-4. Add a future coded implementation pass for the `product-ui-system` comparison test.
+2. Record which patterns were strong enough to reuse and which archetype rules need refinement after two implemented builder cycles.
+3. Promote the strongest showcase patterns into a more implementation-ready starter kit if future repos need code seeds.
+4. Add third and fourth showcase routes from future archetypes so the library keeps proving transferability.

@@ -175,8 +175,8 @@ Deliver:
 
 Status:
 
-- In progress: starter build specs, first builder output notes, first critique artifact, coded prototype, implementation critique, and second-archetype comparison notes now exist
-- Remaining: automate the build-review handoff further and add another coded implementation on a second archetype
+- In progress: starter build specs, implementation-backed critiques, and a routed showcase app now exist for the first two builder tests
+- Remaining: automate the build-review handoff further and keep expanding the showcase app with future archetypes
 
 ### Milestone 5 - Evaluation loop
 

@@ -11,6 +11,7 @@ The goal is not to clone sites. The goal is to capture what makes strong sites f
 - `docs/runbooks/capture-batch.md` - step-by-step guide for running a capture batch
 - `docs/runbooks/analyze-batch.md` - step-by-step guide for turning captures into reports
 - `docs/runbooks/build-from-spec.md` - step-by-step guide for first builder tests
+- `apps/showcase/` - Vite + Svelte + Tailwind app for viewing implemented builder tests
 - `skills/frontend-design-researcher.md` - research skill spec for local models
 - `prompts/analysis-agent-prompt.md` - execution prompt for turning one packet into outputs
 - `prompts/` - reusable prompts for research, build, and critique agents
@@ -55,8 +56,8 @@ Then produce:
 - Run `bun run capture:batch`
 - Run `bun run analysis:prepare`
 - Run `bun run build:validate --file data/prompts/build-specs/developer-tool-modern-ai-release-copilot.json`
-- Run `bun run preview:first-test` on `http://localhost:43731`
-- Or run `bun run preview:first-test:tailscale` to start the preview and expose it on your tailnet in one step
+- Run `bun run showcase:dev` and open `http://localhost:43731`
+- Or run `bun run showcase:tailscale` to start the showcase and expose it on your tailnet in one step
 - Use `skills/frontend-design-researcher.md` with `prompts/master-research-prompt.md`
 - Save outputs into `data/`
 - Use the PRDs in `docs/prds/` to continue the roadmap
